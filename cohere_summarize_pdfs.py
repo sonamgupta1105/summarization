@@ -8,10 +8,10 @@ import argparse
 
 # Set up Cohere client using API key
 
-co = cohere.Client('kUCBYsmOMIjqoTbfE0ryPiH3KQqIEU1XD1v5ZC5j')
+co = cohere.Client('your-api-key')
 
 # Read the text file
-with open('generating_datasets_lm.txt', 'r', encoding="mbcs") as f:
+with open('output.txt', 'r', encoding="mbcs") as f:
     generate_datasets = f.read().replace('\n', '')
 
 # Arguments to parse through command line to run different values for each parameter in the summarize()
