@@ -6,12 +6,13 @@ Created on Fri Aug 11 00:06:46 2023
 """
 import pdfminer
 from pdfminer.high_level import extract_text
+# Ref for above package to install: https://stackoverflow.com/questions/73831425/modulenotfounderror-no-module-named-pdfminer-high-level
 import os
 import re
 
 
-os.chdir("C:/Users/alici/OneDrive/Desktop")
-filename = "C:/Users/alici/OneDrive/Desktop/pretraining.pdf"
+os.chdir("file location")
+filename = "pretraining.pdf"
 text = extract_text(filename)
 
 print(text)
@@ -45,8 +46,8 @@ introduction = text[intro_start_index+12:intro_end_index]
 
 
 print("Title And Authors:\n", title_author)
-print("\nAbstract:\n", abstract)
-print("\nIntroduction:\n", introduction)
+# print("\nAbstract:\n", abstract)
+# print("\nIntroduction:\n", introduction)
 
 
 # Open the file in write mode
